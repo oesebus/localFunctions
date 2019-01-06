@@ -43,6 +43,9 @@ namespace localFunctions
 
 		public static bool IsWordPalindrome(string word)
 		{
+
+			// Validation logic here in outer function
+
 			if (word is null)
 				throw new ArgumentException($" Invalid argument => {nameof(word)}");
 
@@ -50,6 +53,8 @@ namespace localFunctions
 				return true;
 
 			return IsPalindrome(0, word.Length - 1);
+
+			// Local function stay focused on character by character comparison (Recursive call)
 
 			bool IsPalindrome(int lo, int hi)
 			{
